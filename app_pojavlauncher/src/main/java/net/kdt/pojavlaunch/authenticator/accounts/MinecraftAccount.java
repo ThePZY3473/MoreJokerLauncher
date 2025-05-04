@@ -27,7 +27,7 @@ public class MinecraftAccount {
     public String xuid;
     public long expiresAt;
     public String skinFaceBase64;
-    private Bitmap mFaceCache;
+    private transient Bitmap mFaceCache;
 
     protected MinecraftAccount() {}
 

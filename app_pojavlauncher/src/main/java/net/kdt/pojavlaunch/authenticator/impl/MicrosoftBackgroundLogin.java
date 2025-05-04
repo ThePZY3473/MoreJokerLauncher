@@ -68,7 +68,9 @@ public class MicrosoftBackgroundLogin implements BackgroundLogin{
             @NonNull LoginListener loginListener, Callable<Void> continuation,
             String code, boolean isRefresh
     ) {
+        ProgressLayout.setProgress(ProgressLayout.AUTHENTICATE, 0);
         sExecutorService.execute(() -> {
+            loginListener.setMaxLoginProgress(5);
             try {
                 notifyProgress(loginListener, 1);
                 String accessToken = acquireAccessToken(isRefresh, code);
@@ -87,7 +89,7 @@ public class MicrosoftBackgroundLogin implements BackgroundLogin{
                 Log.e("MicroAuth", "Exception thrown during authentication", e);
                 loginListener.onLoginError(e);
             } finally {
-                ProgressLayout.clearProgress(ProgressLayout.AUTHENTICATE_MICROSOFT);
+                ProgressLayout.clearProgress(ProgressLayout.AUTHENTICATE);
             }
         });
     }
@@ -292,7 +294,7 @@ public class MicrosoftBackgroundLogin implements BackgroundLogin{
     /** Wrapper to ease notifying the listener */
     private void notifyProgress(LoginListener listener, int step){
         Tools.runOnUiThread(() -> listener.onLoginProgress(step));
-        ProgressLayout.setProgress(ProgressLayout.AUTHENTICATE_MICROSOFT, step*20);
+        ProgressLayout.setProgress(ProgressLayout.AUTHENTICATE, step*20);
     }
 
 

@@ -38,16 +38,20 @@ public class ElyByBackgroundLogin implements BackgroundLogin {
             @NonNull LoginListener loginListener, Callable<Void> continuation,
             String code, boolean isRefresh
     ) {
+        ProgressLayout.setProgress(ProgressLayout.AUTHENTICATE, 0);
         sExecutorService.execute(() -> {
+            loginListener.setMaxLoginProgress(2);
             try {
+                notifyProgress(loginListener, 1);
                 acquireTokens(isRefresh, code);
+                notifyProgress(loginListener, 2);
                 mAccountInfo = acquireAccountData(mOAuthData.accessToken);
                 continuation.call();
             }catch (Exception e){
                 Log.e("MicroAuth", "Exception thrown during authentication", e);
                 loginListener.onLoginError(e);
             }
-            ProgressLayout.clearProgress(ProgressLayout.AUTHENTICATE_MICROSOFT);
+            ProgressLayout.clearProgress(ProgressLayout.AUTHENTICATE);
         });
     }
 
@@ -111,6 +115,11 @@ public class ElyByBackgroundLogin implements BackgroundLogin {
         }else{
             throw CommonLoginUtils.getResponseThrowable(conn);
         }
+    }
+
+    private void notifyProgress(LoginListener listener, int step){
+        Tools.runOnUiThread(() -> listener.onLoginProgress(step));
+        ProgressLayout.setProgress(ProgressLayout.AUTHENTICATE, step*50);
     }
 
     private static class ElyAccountInfo {

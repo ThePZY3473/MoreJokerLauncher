@@ -85,6 +85,8 @@ public class LauncherActivity extends BaseActivity {
 
     /* Listener for the auth method selection screen */
     private final ExtraListener<Boolean> mSelectAuthMethod = (key, value) -> {
+        // The "false" value is used to stop auth method selection
+        if(!value) return false;
         Fragment fragment = getSupportFragmentManager().findFragmentById(mFragmentView.getId());
         // Allow starting the add account only from the main menu, should it be moved to fragment itself ?
         if(!(fragment instanceof MainMenuFragment)) return false;
@@ -213,7 +215,7 @@ public class LauncherActivity extends BaseActivity {
         mProgressLayout.observe(ProgressLayout.DOWNLOAD_MINECRAFT);
         mProgressLayout.observe(ProgressLayout.UNPACK_RUNTIME);
         mProgressLayout.observe(ProgressLayout.INSTALL_MODPACK);
-        mProgressLayout.observe(ProgressLayout.AUTHENTICATE_MICROSOFT);
+        mProgressLayout.observe(ProgressLayout.AUTHENTICATE);
         mProgressLayout.observe(ProgressLayout.DOWNLOAD_VERSION_LIST);
         mProgressLayout.observe(ProgressLayout.INSTANCE_INSTALL);
     }
