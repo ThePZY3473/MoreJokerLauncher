@@ -455,6 +455,7 @@ public class Gamepad implements GrabListener, GamepadHandler {
 
     private void centerPointer() {
         ViewGroup parent = (ViewGroup) mPointerImageView.getParent();
+        if(parent == null) return;
         placePointerView(parent.getWidth()/2, parent.getHeight()/2);
     }
 
