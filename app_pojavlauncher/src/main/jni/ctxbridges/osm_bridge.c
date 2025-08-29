@@ -9,8 +9,6 @@
 #include <log.h>
 
 static __thread osm_render_window_t* currentBundle;
-// a tiny buffer for rendering when there's nowhere t render
-static char no_render_buffer[4];
 
 // Its not in a .h file because it is not supposed to be used outsife of this file.
 void setNativeWindowSwapInterval(struct ANativeWindow* nativeWindow, int swapInterval);
@@ -30,7 +28,7 @@ osm_render_window_t* osm_init_context(osm_render_window_t* share) {
     memset(render_window, 0, sizeof(osm_render_window_t));
     OSMesaContext osmesa_share = NULL;
     if(share != NULL) osmesa_share = share->context;
-    OSMesaContext context = OSMesaCreateContext_p(GL_RGBA, osmesa_share);
+    OSMesaContext context = OSMesaCreateContext_p(OSMESA_RGBA, osmesa_share);
     if(context == NULL) {
         free(render_window);
         return NULL;
@@ -39,19 +37,8 @@ osm_render_window_t* osm_init_context(osm_render_window_t* share) {
     return render_window;
 }
 
-void osm_set_no_render_buffer(ANativeWindow_Buffer* buffer) {
-    buffer->bits = &no_render_buffer;
-    buffer->width = 1;
-    buffer->height = 1;
-    buffer->stride = 0;
-}
-
 void osm_swap_surfaces(osm_render_window_t* bundle) {
     if(bundle->nativeSurface != NULL && bundle->newNativeSurface != bundle->nativeSurface) {
-        if(!bundle->disable_rendering) {
-            LOGI("Unlocking for cleanup...");
-            ANativeWindow_unlockAndPost(bundle->nativeSurface);
-        }
         ANativeWindow_release(bundle->nativeSurface);
     }
     if(bundle->newNativeSurface != NULL) {
@@ -59,14 +46,10 @@ void osm_swap_surfaces(osm_render_window_t* bundle) {
         bundle->nativeSurface = bundle->newNativeSurface;
         bundle->newNativeSurface = NULL;
         ANativeWindow_acquire(bundle->nativeSurface);
-        ANativeWindow_setBuffersGeometry(bundle->nativeSurface, 0, 0, WINDOW_FORMAT_RGBX_8888);
-        bundle->disable_rendering = false;
         return;
     }else {
         LOGI("No new native surface, switching to dummy framebuffer");
         bundle->nativeSurface = NULL;
-        osm_set_no_render_buffer(&bundle->buffer);
-        bundle->disable_rendering = true;
     }
 
 }
@@ -77,11 +60,15 @@ void osm_release_window() {
 }
 
 void osm_apply_current_ll() {
-    ANativeWindow_Buffer* buffer = &currentBundle->buffer;
-    OSMesaMakeCurrent_p(currentBundle->context, buffer->bits, GL_UNSIGNED_BYTE, buffer->width, buffer->height);
-    if(buffer->stride != currentBundle->last_stride)
-        OSMesaPixelStore_p(OSMESA_ROW_LENGTH, buffer->stride);
-    currentBundle->last_stride = buffer->stride;
+    uint32_t width;
+    uint32_t height;
+    if(currentBundle->nativeSurface != NULL) {
+        width = ANativeWindow_getWidth(currentBundle->nativeSurface);
+        height = ANativeWindow_getHeight(currentBundle->nativeSurface);
+    }else {
+        width = height = 128;
+    }
+    OSMesaMakeCurrent_p(currentBundle->context, currentBundle->nativeSurface, GL_UNSIGNED_BYTE, (GLsizei) width, (GLsizei) height);
 }
 
 void osm_make_current(osm_render_window_t* bundle) {
@@ -104,27 +91,17 @@ void osm_make_current(osm_render_window_t* bundle) {
         osm_swap_surfaces(bundle);
         if(hasSetMainWindow) pojav_environ->mainWindowBundle->state = STATE_RENDERER_ALIVE;
     }
-    osm_set_no_render_buffer(&bundle->buffer);
+
     osm_apply_current_ll();
-    OSMesaPixelStore_p(OSMESA_Y_UP,0);
 }
 
 void osm_swap_buffers() {
     if(currentBundle->state == STATE_RENDERER_NEW_WINDOW) {
         osm_swap_surfaces(currentBundle);
+        osm_apply_current_ll();
         currentBundle->state = STATE_RENDERER_ALIVE;
     }
-
-    if(currentBundle->nativeSurface != NULL && !currentBundle->disable_rendering)
-        if(ANativeWindow_lock(currentBundle->nativeSurface, &currentBundle->buffer, NULL) != 0)
-            osm_release_window();
-
-    osm_apply_current_ll();
-    glFinish_p(); // this will force osmesa to write the last rendered image into the buffer
-
-    if(currentBundle->nativeSurface != NULL && !currentBundle->disable_rendering)
-        if(ANativeWindow_unlockAndPost(currentBundle->nativeSurface) != 0)
-            osm_release_window();
+    if(currentBundle->state == STATE_RENDERER_ALIVE) OSMesaSwapBuffers_p();
 }
 
 void osm_setup_window() {

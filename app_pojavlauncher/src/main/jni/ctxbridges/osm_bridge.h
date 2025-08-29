@@ -12,9 +12,7 @@ typedef struct {
     char       state;
     struct ANativeWindow *nativeSurface;
     struct ANativeWindow *newNativeSurface;
-    ANativeWindow_Buffer buffer;
     int32_t last_stride;
-    bool disable_rendering;
     OSMesaContext context;
 } osm_render_window_t;
 

@@ -132,7 +132,9 @@ public class MinecraftGLSurface extends View implements GrabListener, DirectGame
                 }
 
                 @Override
-                public void surfaceDestroyed(@NonNull SurfaceHolder holder) {}
+                public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
+                    JREUtils.setupBridgeWindow(null);
+                }
             });
 
             ((ViewGroup)getParent()).addView(surfaceView);
@@ -163,6 +165,7 @@ public class MinecraftGLSurface extends View implements GrabListener, DirectGame
 
                 @Override
                 public boolean onSurfaceTextureDestroyed(@NonNull SurfaceTexture surface) {
+                    JREUtils.setupBridgeWindow(null);
                     return true;
                 }
 

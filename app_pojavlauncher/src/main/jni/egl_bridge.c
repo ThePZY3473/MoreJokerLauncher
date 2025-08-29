@@ -83,7 +83,11 @@ EXTERNAL_API void pojavTerminate() {
 }
 
 JNIEXPORT void JNICALL Java_net_kdt_pojavlaunch_utils_JREUtils_setupBridgeWindow(JNIEnv* env, ABI_COMPAT jclass clazz, jobject surface) {
-    pojav_environ->pojavWindow = ANativeWindow_fromSurface(env, surface);
+    if(surface != NULL) {
+        pojav_environ->pojavWindow = ANativeWindow_fromSurface(env, surface);
+    }else {
+        pojav_environ->pojavWindow = NULL;
+    }
     if(br_setup_window != NULL) br_setup_window();
 }
 

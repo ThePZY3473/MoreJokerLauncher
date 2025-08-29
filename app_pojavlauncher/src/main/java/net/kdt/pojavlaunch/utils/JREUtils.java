@@ -202,6 +202,8 @@ public class JREUtils {
 	    envMap.put("MESA_GL_VERSION_OVERRIDE", "4.6");
         envMap.put("MESA_GLSL_VERSION_OVERRIDE", "460");
 
+        envMap.put("GALLIUM_THREAD", "0"); // FIXME finure out how to make it not explode
+
         envMap.put("FORCE_VSYNC", String.valueOf(LauncherPreferences.PREF_FORCE_VSYNC));
 
         envMap.put("MESA_GLSL_CACHE_DIR", Tools.DIR_CACHE.getAbsolutePath());
