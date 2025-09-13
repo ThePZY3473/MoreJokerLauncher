@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 
 import com.kdt.mcgui.ProgressLayout;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 import net.kdt.pojavlaunch.instances.InstanceInstaller;
 import net.kdt.pojavlaunch.instances.InstanceManager;

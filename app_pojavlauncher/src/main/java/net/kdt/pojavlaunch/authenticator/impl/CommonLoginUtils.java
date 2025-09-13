@@ -14,7 +14,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class CommonLoginUtils {
 

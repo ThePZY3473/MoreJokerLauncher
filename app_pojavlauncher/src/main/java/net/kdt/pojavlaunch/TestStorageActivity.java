@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat;
 import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import net.kdt.pojavlaunch.tasks.AsyncAssetManager;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class TestStorageActivity extends Activity {
     private final int REQUEST_STORAGE_REQUEST_CODE = 1;

@@ -41,7 +41,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 import fr.spse.extended_view.ExtendedTextView;
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class AccountSpinner extends AppCompatSpinner implements LoginListener, AdapterView.OnItemSelectedListener, ValueAnimator.AnimatorUpdateListener {
     private Adapter mAdapter;

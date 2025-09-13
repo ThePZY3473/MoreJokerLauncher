@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SeekBarPreference;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class CustomSeekBarPreference extends SeekBarPreference {
 

@@ -49,7 +49,7 @@ import net.kdt.pojavlaunch.utils.NotificationUtils;
 
 import java.lang.ref.WeakReference;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class LauncherActivity extends BaseActivity {
     public static final String SETTING_FRAGMENT_TAG = "SETTINGS_FRAGMENT";

@@ -2,7 +2,7 @@ package net.kdt.pojavlaunch.modloaders.modpacks.api;
 
 import com.kdt.mcgui.ProgressLayout;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 import net.kdt.pojavlaunch.Tools;
 import net.kdt.pojavlaunch.instances.InstanceManager;
 import net.kdt.pojavlaunch.instances.Instance;
