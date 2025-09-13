@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 
 import androidx.preference.Preference;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 import net.kdt.pojavlaunch.extra.ExtraConstants;
 import net.kdt.pojavlaunch.extra.ExtraCore;
 

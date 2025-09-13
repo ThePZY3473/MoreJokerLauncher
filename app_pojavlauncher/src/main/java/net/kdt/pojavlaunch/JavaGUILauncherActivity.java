@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class JavaGUILauncherActivity extends BaseActivity implements View.OnTouchListener {
 

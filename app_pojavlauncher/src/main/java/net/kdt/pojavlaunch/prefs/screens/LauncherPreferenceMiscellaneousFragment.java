@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.preference.Preference;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 import net.kdt.pojavlaunch.Tools;
 import net.kdt.pojavlaunch.utils.GLInfoUtils;
 

@@ -30,7 +30,7 @@ import net.kdt.pojavlaunch.multirt.Runtime;
 import net.kdt.pojavlaunch.plugins.FFmpegPlugin;
 import net.kdt.pojavlaunch.prefs.*;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class JREUtils {
     private JREUtils() {}

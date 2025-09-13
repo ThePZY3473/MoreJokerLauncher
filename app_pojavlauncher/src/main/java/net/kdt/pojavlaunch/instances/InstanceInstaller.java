@@ -26,7 +26,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public class InstanceInstaller implements ContextExecutorTask {
     private static final File sLastInstallInfo = new File(Tools.DIR_CACHE, "last_installer.json");

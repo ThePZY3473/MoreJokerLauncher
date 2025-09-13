@@ -15,7 +15,7 @@ import android.webkit.WebViewClient;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import git.artdeell.mojo.R;
+import git.artjoker.mojo.R;
 
 public abstract class WebViewCompletionFragment extends Fragment {
     private final String mTrackedUrl;
