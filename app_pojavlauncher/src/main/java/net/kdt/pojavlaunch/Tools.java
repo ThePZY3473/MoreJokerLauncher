@@ -97,7 +97,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import git.artdeell.mojo.BuildConfig;
+import git.artjoker.mojo.BuildConfig;
 import git.artjoker.mojo.R;
 
 @SuppressWarnings("IOStreamConstructor")
