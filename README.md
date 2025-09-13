@@ -2,7 +2,7 @@
  (我的天哪，我在做什么)
 <img src="https://github.com/MojoLauncher/MojoLauncher/blob/v3_openjdk/app_pojavlauncher/src/main/assets/pojavlauncher.png" align="left" width="150" height="150" alt="MojoLauncher logo">
 
-[![Android CI](https://github.com/MojoLauncher/MojoLauncher/workflows/Android%20CI/badge.svg)](https://github.com/MojoLauncher/MojoLauncher/actions)
+[![Android CI](https://github.com/MojoLauncher/MojoLauncher/workflows/Android CI/badge.svg)](https://github.com/MojoLauncher/MojoLauncher/actions)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MojoLauncher/MojoLauncher)](https://github.com/MojoLauncher/MojoLauncher/actions)
 [![Crowdin](https://badges.crowdin.net/pojavlauncher/localized.svg)](https://crowdin.com/project/pojavlauncher)
 [![Discord](https://img.shields.io/discord/1365346109131722753.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/VHdwQFsaGX)
@@ -14,7 +14,7 @@
 ## Navigation
 - [介绍](#介绍)  
 - [获取 MojoLauncher](#获取-MojoLauncher)
-- 编译](#编译) 
+- [编译](#编译) 
 - [当前计划](#当前计划) 
 - [许可证](#许可证) 
 - [贡献](#贡献) 
