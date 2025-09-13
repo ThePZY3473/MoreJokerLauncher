@@ -8,9 +8,9 @@
 [![Discord](https://img.shields.io/discord/1365346109131722753.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/VHdwQFsaGX)
 （此fork似乎无意义）
 
-* MojoLauncher is a launcher, based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), that allows you to play Minecraft: Java Edition on your Android device!
+* MojoLauncher是一个一个启动器啊啊啊啊啊啊，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), 反正是用来运行Minecraft:Java Edition 的。
 
-* It can run almost every version of Minecraft, allowing you to use .jar only installers to install modloaders such as [Forge](https://files.minecraftforge.net/) and [Fabric](http://fabricmc.net/), mods like [OptiFine](https://optifine.net) and [LabyMod](https://www.labymod.net/en), as well as hack clients like [Wurst](https://www.wurstclient.net/), and much more!
+* 它几乎可以运行每个版本的Minecraft，让你能够使用仅限.jar的安装程序来安装模组加载器，例如 [Forge](https://files.minecraftforge.net/) 和 [Fabric](http://fabricmc.net/), 模组 例如 [OptiFine](https://optifine.net) 和 [LabyMod](https://www.labymod.net/en), 以及挂端 [Wurst](https://www.wurstclient.net/), 还有更多!
 
 ## Navigation
 - [Introduction](#introduction)  
@@ -21,21 +21,21 @@
 - [Contributing](#contributing) 
 - [Credits & Third party components and their licenses](#credits--third-party-components-and-their-licenses-if-available)
 
-## Introduction 
-* MojoLauncher is a Minecraft: Java Edition launcher for Android based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
-* This launcher can launch almost all available Minecraft versions ranging from rd-132211 to 1.21 snapshots (including Combat Test versions). 
-* Modding via Forge and Fabric are also supported. 
+## 介绍 
+* MojoLauncher是一个Minecraft:Java Edition的Android启动器，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
+*该启动器器可以启动几乎所有可用的Minecraft版本，从rd-132211到1.21快照(包括战斗测试版本)。
+*还支持安装Forge和Fabric。
 
-## Getting MojoLauncher
+## 获取 MojoLauncher
 
-You can get MojoLauncher via three methods:
+你可以通过三种方法获取 MojoLauncher:
 
-1. You can get the prebuilt app from [automatic builds](https://github.com/MojoLauncher/MojoLauncher/actions).
+1. 您可以从预构建的应用获取 [automatic builds](https://github.com/MojoLauncher/MojoLauncher/actions).
 
-2. You can get it from Google Play by clicking on this badge:
-[![Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=git.artdeell.mojo)
+2. 您可以通过点击此图片从 Google Play 获取另一个优秀的游戏:
+[![Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact)
 
-3. You can [build](#building) from source.
+3. 你可以去自己用源代码编译 [build](#building) 
 ## Building   
 * Build the launcher (it will automatically download all required components)
 ```
@@ -43,6 +43,7 @@ You can get MojoLauncher via three methods:
 ```
 (Replace `./gradlew` with `.\gradlew.bat` if you are building on Windows).
 
+* （下面的自己看吧）
 ## Current roadmap
 - [x] Instance system in favor of profiles
 - [x] Out-of-the box 1.21.5 support
