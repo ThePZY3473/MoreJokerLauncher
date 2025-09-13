@@ -8,7 +8,7 @@
 [![Discord](https://img.shields.io/discord/1365346109131722753.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/VHdwQFsaGX)
 （此fork似乎无意义）
 
-* MojoLauncher是一个一个启动器啊啊啊啊啊啊，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), 反正是用来运行Minecraft:Java Edition 的。
+* MoreJokerLauncher是一个一个启动器啊啊啊啊啊啊，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), 反正是用来运行Minecraft:Java Edition 的。
 
 * 它几乎可以运行每个版本的Minecraft，让你能够使用仅限.jar的安装程序来安装模组加载器，例如 [Forge](https://files.minecraftforge.net/) 和 [Fabric](http://fabricmc.net/), 模组 例如 [OptiFine](https://optifine.net) 和 [LabyMod](https://www.labymod.net/en), 以及挂端 [Wurst](https://www.wurstclient.net/), 还有更多!
 
@@ -22,13 +22,13 @@
 - [Credits & Third party components and their licenses](#credits--third-party-components-and-their-licenses-if-available)
 
 ## 介绍 
-* MojoLauncher是一个Minecraft:Java Edition的Android启动器，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
-*该启动器器可以启动几乎所有可用的Minecraft版本，从rd-132211到1.21快照(包括战斗测试版本)。
-*还支持安装Forge和Fabric。
+* MoreJokerLauncher是一个Minecraft:Java Edition的Android启动器，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
+* 该启动器可以启动几乎所有可用的Minecraft版本，从rd-132211到1.21快照(包括战斗测试版本)。 
+* 还支持安装Forge和Fabric。
 
 ## 获取 MojoLauncher
 
-你可以通过三种方法获取 MojoLauncher:
+你可以通过三种方法获取 MoreJokerLauncher:
 
 1. 您可以从预构建的应用获取 [automatic builds](https://github.com/MojoLauncher/MojoLauncher/actions).
 
