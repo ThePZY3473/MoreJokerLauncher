@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
-    <string name="app_name">MojoLauncher (Minecraft: Java Edition for Android)</string>
-    <string name="app_short_name">MojoLauncher</string>
+    <string name="app_name">MoreJokerLauncher (Minecraft: Java Edition for Android)</string>
+    <string name="app_short_name">MoreJokerLauncher</string>
 
     <!-- Action bar part -->
 
@@ -22,7 +22,7 @@
     <string name="alerttitle_installmod">Select a mod installer</string>
 
     <!-- Error messages -->
-    <string name="error_fatal">MojoLauncher has unexpectedly crashed</string>
+    <string name="error_fatal">MoreJokeroLauncher has unexpectedly crashed</string>
     <string name="error_no_version">No version!</string>
     <string name="error_show_more">Show more</string>
     <string name="error_show_less">Show less</string>
