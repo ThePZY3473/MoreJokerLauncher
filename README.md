@@ -1,4 +1,4 @@
-<H1 align="center">MojoLauncher</H1>
+<H1 align="center">MoreJokerLauncher</H1>
 
 <img src="https://github.com/MojoLauncher/MojoLauncher/blob/v3_openjdk/app_pojavlauncher/src/main/assets/pojavlauncher.png" align="left" width="150" height="150" alt="MojoLauncher logo">
 
