@@ -13,12 +13,12 @@
 
 ## Navigation
 - [介绍](#介绍)  
-- [获取 MoreJokerLauncher](#获取 MoreJokerLauncher)
-- [编译](#编译) 
+- [获取 MojoLauncher](#获取-MojoLauncher)
+- 编译](#编译) 
 - [当前计划](#当前计划) 
 - [许可证](#许可证) 
-- [Contributing](#contributing) 
-- [Credits & Third party components and their licenses](#credits--third-party-components-and-their-licenses-if-available)
+- [贡献](#贡献) 
+- [Credits和第三方组件及其许可证(如果可用)](#Credits和第三方组件及其许可证(如果可用))
 
 ## 介绍 
 * MoreJokerLauncher是一个Minecraft:Java Edition的Android启动器，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
