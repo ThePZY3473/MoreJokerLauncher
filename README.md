@@ -1,12 +1,11 @@
 <H1 align="center">MoreJokerLauncher</H1>
-
+ (我的天哪，我在做什么)
 <img src="https://github.com/MojoLauncher/MojoLauncher/blob/v3_openjdk/app_pojavlauncher/src/main/assets/pojavlauncher.png" align="left" width="150" height="150" alt="MojoLauncher logo">
 
 [![Android CI](https://github.com/MojoLauncher/MojoLauncher/workflows/Android%20CI/badge.svg)](https://github.com/MojoLauncher/MojoLauncher/actions)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MojoLauncher/MojoLauncher)](https://github.com/MojoLauncher/MojoLauncher/actions)
 [![Crowdin](https://badges.crowdin.net/pojavlauncher/localized.svg)](https://crowdin.com/project/pojavlauncher)
 [![Discord](https://img.shields.io/discord/1365346109131722753.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/VHdwQFsaGX)
-（此fork似乎无意义）
 
 * MoreJokerLauncher是一个一个启动器啊啊啊啊啊啊，基于 [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), 反正是用来运行Minecraft:Java Edition 的。
 
@@ -30,12 +29,13 @@
 
 你可以通过三种方法获取 MoreJokerLauncher:
 
-1. 您可以从预构建的应用获取 [automatic builds](https://github.com/MojoLauncher/MojoLauncher/actions).
+1. 您可以从预构建的应用获取 [automatic builds](https://github.com/ThePZY3473/MoreJokerLauncher/actions).
 
 2. 您可以通过点击此图片从 Google Play 获取另一个优秀的游戏:
 [![Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact)
 
-3. 你可以去自己用源代码编译 [build](#building) 
+3. 你可以去自己用源代码编译 [build](#building)
+* （下面的自己看吧） 
 ## Building   
 * Build the launcher (it will automatically download all required components)
 ```
@@ -43,7 +43,6 @@
 ```
 (Replace `./gradlew` with `.\gradlew.bat` if you are building on Windows).
 
-* （下面的自己看吧）
 ## Current roadmap
 - [x] Instance system in favor of profiles
 - [x] Out-of-the box 1.21.5 support
